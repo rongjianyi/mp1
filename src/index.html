@@ -4,10 +4,147 @@
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
+        <title>Project Possible</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@400;500&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
     <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
+        <header class="navbar" id="navbar">
+            <a class="navbar__brand" href="#home"><i class="fa-solid fa-mountain"></i> Project Possible</a>
+            <nav>
+                <ul class="navbar__menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#nims">Nims</a></li>
+                    <li><a href="#phases">Phases</a></li>
+                    <li><a href="#peaks">14 Peaks</a></li>
+                    <li><a href="#film">Film</a></li>
+                    <li><a href="#connect">Connect</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero" id="home">
+                <div class="hero__content">
+                    <p class="hero__eyebrow">2019 &middot; 14 peaks &middot; 189 days</p>
+                    <h1 class="hero__title">Nothing Is Impossible</h1>
+                    <p class="hero__lead">One climber set out to summit all fourteen of the world's 8,000-metre mountains in a single season, a feat that had taken others most of a decade.</p>
+                    <a class="button" href="#peaks">See the peaks <i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+            </section>
+
+            <section class="section about" id="nims">
+                <div class="container about__grid">
+                    <div class="about__text">
+                        <h2>Nirmal "Nims" Purja</h2>
+                        <p>Born in Nepal, Nims served in the British Army's Brigade of Gurkhas and later became the first Gurkha to join the UK Special Boat Service. In 2019 he left the military to chase a single goal.</p>
+                        <p>He called it Project Possible: climb every mountain above 8,000 metres, faster than anyone thought a human could, and show the world how far the limits of human endurance really go.</p>
+                    </div>
+                    <ul class="stats">
+                        <li><span class="stats__num">14</span><span class="stats__label">peaks over 8,000 m</span></li>
+                        <li><span class="stats__num">189</span><span class="stats__label">days in total</span></li>
+                        <li><span class="stats__num">3</span><span class="stats__label">countries</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section phases" id="phases">
+                <div class="container">
+                    <h2>Three Phases</h2>
+                    <div class="phases__grid">
+                        <article class="card">
+                            <i class="fa-solid fa-flag card__icon"></i>
+                            <h3>Phase 1 &middot; Nepal</h3>
+                            <p class="card__date">April &ndash; May 2019</p>
+                            <p>Annapurna, Dhaulagiri, Kangchenjunga, Everest, Lhotse and Makalu. Six summits, including Everest, Lhotse and Makalu within about 48 hours.</p>
+                        </article>
+                        <article class="card">
+                            <i class="fa-solid fa-person-hiking card__icon"></i>
+                            <h3>Phase 2 &middot; Pakistan</h3>
+                            <p class="card__date">July 2019</p>
+                            <p>Nanga Parbat, Gasherbrum I, Gasherbrum II, K2 and Broad Peak. Five of the Karakoram's giants, including the notorious K2.</p>
+                        </article>
+                        <article class="card">
+                            <i class="fa-solid fa-snowflake card__icon"></i>
+                            <h3>Phase 3 &middot; Tibet &amp; Nepal</h3>
+                            <p class="card__date">September &ndash; October 2019</p>
+                            <p>Cho Oyu, Manaslu and finally Shishapangma, which required special permission from China to climb that season.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section peaks" id="peaks">
+                <div class="container">
+                    <h2>The 14 Peaks</h2>
+                    <p class="section__sub">Use the arrows to travel the route. Tap a peak for the story.</p>
+                    <div class="carousel">
+                        <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Previous peak"><i class="fa-solid fa-chevron-left"></i></button>
+                        <div class="carousel__viewport">
+                            <ul class="carousel__track" id="carousel-track"></ul>
+                        </div>
+                        <button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Next peak"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                    <div class="carousel__dots" id="carousel-dots"></div>
+                </div>
+            </section>
+
+            <section class="quote">
+                <blockquote>
+                    <p>&ldquo;Nothing is impossible.&rdquo;</p>
+                    <cite>&mdash; Nirmal Purja</cite>
+                </blockquote>
+            </section>
+
+            <section class="section film" id="film">
+                <div class="container">
+                    <h2>On the Mountain</h2>
+                    <div class="film__grid">
+                        <figure class="film__item">
+                            <iframe class="film__media" src="https://www.youtube-nocookie.com/embed/8QH5hBOoz08" title="14 Peaks: Nothing Is Impossible | Official Trailer | Netflix" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>
+                            <figcaption>14 Peaks: Nothing Is Impossible &middot; Official trailer (Netflix)</figcaption>
+                        </figure>
+                        <figure class="film__item">
+                            <video class="film__media" controls preload="metadata" poster="assets/hero.jpg">
+                                <source src="assets/film.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                            <figcaption>Panoramic view of the Himalayan peaks</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer" id="connect">
+            <div class="container">
+                <h2>Follow the Journey</h2>
+                <ul class="social">
+                    <li><a href="https://www.instagram.com/nimsdai/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://x.com/nimsdai" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/nimsdai" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.youtube.com/results?search_query=nimsdai" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+                <p class="footer__note">A CS409 MP1 tribute page. Not affiliated with Nirmal Purja.</p>
+                <p class="footer__note">Backgrounds via Wikimedia Commons: "Sunset view of Everest" by Nir B. Gurung (CC BY-SA 4.0) and "Mount Everest, Himalayas" by Vyacheslav Argenberg (CC BY 4.0). Peak photographs are from Wikimedia Commons and credited in each peak's story. Video by Pexels. Trailer embedded from Netflix's YouTube channel.</p>
+            </div>
+        </footer>
+
+        <div class="modal" id="modal" aria-hidden="true">
+            <div class="modal__backdrop" data-close></div>
+            <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <button class="modal__close" type="button" aria-label="Close" data-close><i class="fa-solid fa-xmark"></i></button>
+                <img class="modal__photo" id="modal-photo" src="" alt="">
+                <div class="modal__body">
+                    <p class="modal__order" id="modal-order"></p>
+                    <h3 id="modal-title"></h3>
+                    <ul class="modal__facts" id="modal-facts"></ul>
+                    <p id="modal-story"></p>
+                    <p class="modal__credit" id="modal-credit"></p>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
